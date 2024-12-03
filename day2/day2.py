@@ -1,5 +1,4 @@
 def how_many_safe(file_path):
-
     all_reports = []
     with open(file_path, "r") as file:
         for line in file:
