@@ -42,4 +42,4 @@ def determine_similarity_index(file_path):
 
 
 # print(determine_distance("day1_input.txt"))
-print(determine_similarity_index("day1_input.txt"))
+print(determine_similarity_index("day1/day1_input.txt"))

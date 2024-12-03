@@ -51,5 +51,5 @@ def how_many_safe(file_path):
     return num_safe_reports
 
    
-print(how_many_safe("day_2/test.txt"))
-print(how_many_safe("day_2/day_2_input.txt"))
+print(how_many_safe("day2/test.txt"))
+print(how_many_safe("day2/day_2_input.txt"))
