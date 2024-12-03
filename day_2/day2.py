@@ -9,18 +9,19 @@ def how_many_safe(file_path):
     num_safe_reports = 0
 
     # 1. Check if level's order is always increasing OR decreasing
-    order = ["increasing", "decreasing"]
-    for level in all_reports:
-        for l in range(1, len(level)+1):
-            if level[l-1] < level[l]:
-                if level_order == order[0] and l != 1:
-                    level_order = order[0]
-            elif level[l-1] > level[l]:
-                level_order = order[1]
-            else:
-                break
-
+    def is_monotonic(arr):
+        return all(arr[i] < arr[i + 1] for i in range(len(arr) - 1)) or \
+           all(arr[i] > arr[i + 1] for i in range(len(arr) - 1))
 
     # 2. Check if difference is between 1-3 between consecutive elements
+    def is_difference_between_1_and_3(arr):
+        return all((1 <= abs(arr[i] - arr[i + 1]) <= 3) for i in range(len(arr) - 1))
+    
+    for level in all_reports:
+        if is_monotonic(level) is True and \
+        is_difference_between_1_and_3(level) is True:
+            num_safe_reports += 1
 
-print(how_many_safe("day_2/test.txt"))
+    return num_safe_reports
+
+print(how_many_safe("day_2/day_2_input.txt"))
