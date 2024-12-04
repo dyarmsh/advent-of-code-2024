@@ -13,4 +13,4 @@ def calculate_product(file_path):
     return total 
 
 print(calculate_product("day3/test.txt"))
-print(calculate_product("day3/day3_input.txt"))
+print(calculate_product("inputs/day3_input.txt"))

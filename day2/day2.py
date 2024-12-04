@@ -51,4 +51,4 @@ def how_many_safe(file_path):
 
    
 print(how_many_safe("day2/test.txt"))
-print(how_many_safe("day2/day_2_input.txt"))
+print(how_many_safe("inputs/day_2_input.txt"))

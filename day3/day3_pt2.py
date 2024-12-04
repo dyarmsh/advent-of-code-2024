@@ -28,4 +28,4 @@ def calculate_product_extended(file_path):
     return total
 
 print(calculate_product_extended("day3/test.txt"))
-print(calculate_product_extended("day3/day3_input.txt"))
+print(calculate_product_extended("inputs/day3_input.txt"))
