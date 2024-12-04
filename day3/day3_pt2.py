@@ -9,10 +9,8 @@ def calculate_product_extended(file_path):
     do_pattern = re.compile(r"do\(\)")
     dont_pattern = re.compile(r"don't\(\)")
 
-    # Split the input into tokens (preserving order)
     tokens = re.findall(r"mul\(\d+,\s*\d+\)|do\(\)|don't\(\)", chars_str)
     
-    # State tracking
     mul_enabled = True  # Default: `mul` instructions are enabled in the beginning
     total = 0
 
