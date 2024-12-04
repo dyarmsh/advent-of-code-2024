@@ -5,8 +5,7 @@ def calculate_product(file_path):
         chars_str = file.read()
 
     # Find all matches for the mul(x, y) pattern
-    matches = re.findall(r"mul\((\d+),\s*(\d+)\)", chars_str) # only captures the numbers
-
+    matches = re.findall(r"(mul\((\d+),\s*(\d+)\))", chars_str) # only captures the numbers
     total = 0 
     for x, y in matches:
         total += int(x) * int(y)
